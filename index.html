@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Project website for WorldScore">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LongVie</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/project.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/slick-theme.css">
+  <link rel="stylesheet" href="assets/css/video.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery-migrate.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+
+  <script type="text/javascript">
+    var sc_project = 13109252;
+    var sc_invisible = 1;
+    var sc_security = "bbfbe108"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/13109252/0/bbfbe108/1/" alt="Web Analytics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+</head>
+
+<body>
+
+  <section style="margin-top: 30px;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+      <div class="row" id="title" style="width: 100%; text-align: center;">
+        <div class="col">
+          <h1 class="title is-1 publication-title" style="font-size: 3em;">
+            <span style="color:#9370db; font-weight: bold; font-style: italic">
+              LongVie
+            </span> : Multimodal-Guided Controllable<br>Ultra-Long Video Generations
+          </h1>
+          <div class="is-size-5 publication-authors" style="font-size: 1.2em; margin-top: 15px;">
+            <span class="author-block">
+              <span class="author-block">
+                <a href="https://jianxgao.github.io/" target="_blank">Jianxiong Gao</a><sup>2,&#8201;5</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://frozenburning.github.io/" target="_blank">Zhaoxi Chen</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://alvinliu0.github.io/" target="_blank">Xian Liu</a><sup>4</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="https://www.dcs.warwick.ac.uk/~feng/" target="_blank">Jianfeng Feng</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://chenyangsi.top/" target="_blank">Chenyang Si</a><sup>1,&dagger;</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://yanweifu.github.io/" target="_blank">Yanwei Fu</a><sup>2,&dagger;</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://mmlab.siat.ac.cn/yuqiao" target="_blank">Yu Qiao</a><sup>5</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://liuziwei7.github.io/" target="_blank">Ziwei Liu</a><sup>3,&dagger;</sup>
+              </span>
+          </div>
+          <!-- <br> -->
+
+          <div class="is-size-5 publication-authors" style="font-size: 1.2em; color:#4a4a4a;margin-top: 5px;">
+            <span class="author-block">(<sup>&dagger;</sup>&#8201;corresponding authors) </span>
+          </div>
+
+          <div class="is-size-5 publication-authors" style="font-size: 1.2em; color:#4a4a4a;margin-top:5px;">
+            <span class="author-block">
+              <sup>1</sup>
+              Nanjing University &nbsp;&nbsp;
+              <sup>2</sup>
+              Fudan University &nbsp;&nbsp;
+              <sup>3</sup>
+              S-Lab, Nanyang Technological University &nbsp;&nbsp;
+              <br>
+              <sup>4</sup>
+              Nvidia &nbsp;&nbsp;
+              <sup>5</sup>
+              Shanghai Artificial Intelligence Laboratory &nbsp;&nbsp;
+            </span>
+          </div>
+
+          <div class="row" id="resources" style="margin-top: 15px;">
+            <div class="col text-center mt-m4">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a class="resource-button" href="https://arxiv.org/abs/2508.03694">
+                    <i class="bi bi-file-earmark-text"></i>
+                    Paper
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="resource-button" href="">
+                    <i class="bi bi-github"></i>
+                    Github (Coming)
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="resource-button" href="">
+                    <span class="icon">
+                      🤗
+                    </span>
+                    Model
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="dimensions">
+    <div class="container">
+      <p class="text-header">Video Gallery</p>
+      
+      <!-- 轮播视频画廊 -->
+      <div class="video-gallery" style="margin-bottom: 20px;">
+        <!-- <div class="carousel-title">Multiple Style</div> -->
+        <div class="carousel-container"  data-carousel="carousel3">
+          <div class="carousel-wrapper four-slides" id="carousel-wrapper">
+            
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+              <div class="gallery-row">
+                <div class="ref-video">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/ride_horse/gt.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Reference Video</div>
+                  </div>
+                </div>
+                <div class="style-videos">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/ride_horse/autumn.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 1</div>
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/ride_horse/alien.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 2</div>
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/ride_horse/winter.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <div class="gallery-row">
+                <div class="ref-video">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/cars/car_gt.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Reference Video</div>
+                  </div>
+                </div>
+                <div class="style-videos">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/cars/car_spring.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 1</div>
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/cars/car_summer.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 2</div>
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/cars/car_winter.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+              <div class="gallery-row">
+                <div class="ref-video">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/monster/moster_gt.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Reference Video</div>
+                  </div>
+                </div>
+                <div class="style-videos">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/monster/moster_red_2.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 1</div>
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/monster/moster_night_1.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 2</div>
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/monster/moster_ice_1.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-slide">
+              <div class="gallery-row">
+                <div class="ref-video">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/uav/gt.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Reference Video</div>
+                  </div>
+                </div>
+                <div class="style-videos">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/uav/spring.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 1</div>
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/uav/autumn.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 2</div>
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/uav/winter.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <div class="video-label">Style 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- 导航按钮 -->
+          <button class="carousel-nav prev" id="prevBtn">‹</button>
+          <button class="carousel-nav next" id="nextBtn">›</button>
+        </div>
+
+        <!-- 页面指示器 -->
+        <div class="carousel-indicators">
+          <div class="carousel-indicator active" data-slide="0"></div>
+          <div class="carousel-indicator" data-slide="1"></div>
+          <div class="carousel-indicator" data-slide="2"></div>
+          <div class="carousel-indicator" data-slide="3"></div>
+        </div>
+      </div>
+
+      <!-- 轮播视频画廊 -->
+      <div class="video-gallery" style="margin-bottom: 20px;">
+        <!-- <div class="carousel-title">General Videos</div> -->
+        <div class="carousel-container"  data-carousel="carousel3">
+          <div class="carousel-wrapper four-slides" id="carousel-wrapper">
+            
+
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+              <div class="gallery-row">
+                <div class="ref-video">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/people_talk.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Reference Video</div> -->
+                  </div>
+                </div>
+                <div class="style-videos">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/hiking.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 1</div> -->
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/man_mountain.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 2</div> -->
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/woman_flower.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 3</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <div class="gallery-row">
+                <div class="ref-video">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/box.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Reference Video</div> -->
+                  </div>
+                </div>
+                <div class="style-videos">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/tiger.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 1</div> -->
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/uav_2.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 2</div> -->
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/car.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 3</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+              <div class="gallery-row">
+                <div class="ref-video">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/cat.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Reference Video</div> -->
+                  </div>
+                </div>
+                <div class="style-videos">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/mountain_1.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 1</div> -->
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/moster_Earthy_1.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 2</div> -->
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/forest.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 3</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-slide">
+              <div class="gallery-row">
+                <div class="ref-video">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/mountain_3.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Reference Video</div> -->
+                  </div>
+                </div>
+                <div class="style-videos">
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/game_ch.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 1</div> -->
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/cook.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 2</div> -->
+                  </div>
+                  <div class="video-wrapper">
+                    <video muted loop autoplay>
+                      <source src="assets/videos/general/dog.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-progress-container">
+                      <div class="video-progress-bar"></div>
+                    </div>
+                    <div class="video-time">0:00 / 0:00</div>
+                    <button class="video-play-btn">▶</button>
+                    <!-- <div class="video-label">Style 3</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <!-- 导航按钮 -->
+          <button class="carousel-nav prev" id="prevBtn">‹</button>
+          <button class="carousel-nav next" id="nextBtn">›</button>
+        </div>
+
+        <!-- 页面指示器 -->
+        <div class="carousel-indicators">
+          <div class="carousel-indicator active" data-slide="0"></div>
+          <div class="carousel-indicator" data-slide="1"></div>
+          <div class="carousel-indicator" data-slide="2"></div>
+          <div class="carousel-indicator" data-slide="3"></div>
+        </div>
+      </div>
+      <hr style="border: none; height: 2px; background-color: #333333; margin: 20px 0; font-size: 2em; font-weight: bold; ">
+    </div>
+  </section>
+
+  
+
+
+
+  <section>
+    <div class="container">
+      <!-- <p class="text-header" style="margin-top: -10px;">Video Demo</p>
+      <div class="d-flex justify-content-center">
+        <div class="video-fixed">
+          <iframe src="https://www.youtube.com/embed/anhaV9ld6qQ?rel=0&amp;modestbranding=1&amp;playsinline=1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen title="YouTube video player"></iframe>
+        </div>
+      </div> -->
+
+      <p class="text-header" style="margin-top: 30px;">Abstract</p>
+      <ul class="body-text" style="list-style-type: disc; padding-left: 2rem;padding-right: 2rem;">
+        <!-- <li>We introduce <strong>ShotBench</strong>, a comprehensive benchmark for evaluating VLMs’ understanding of
+          cinematic language. It comprises over 3.5k expert-annotated QA pairs derived from images and video clips of
+          over 200 critically acclaimed films (predominantly Oscar-nominated), covering eight distinct cinematography
+          dimensions. This provides a rigorous new standard for assessing fine-grained visual comprehension in film.
+        </li>
+        <li>We conducted an extensive evaluation of 24 leading VLMs, including prominent open-source and proprietary
+          models, on ShotBench. Our results reveal a critical performance gap: even the most capable model, GPT-4o,
+          achieves less than 60% average accuracy. This systematically quantifies the current limitations of VLMs in
+          genuine cinematographic comprehension.</li>
+        <li>To address the identified limitations and facilitate future research, we constructed
+          <strong>ShotQA</strong>, the first large-scale multimodal dataset for cinematography understanding, containing
+          approximately 70k high-quality QA pairs. Leveraging ShotQA, we developed <strong>ShotVL</strong>, a novel VLM
+          trained using Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO). ShotVL significantly
+          surpasses all tested open-source and proprietary models, establishing a new state-of-the-art on ShotBench. -->
+        Controllable ultra-long video generation is a fundamental yet challenging task, as existing methods—while
+        effective for short clips—struggle to scale due to issues such as temporal inconsistency and visual degradation.
+        In this paper, we initially investigate and identify three key factors: separate noise initialization,
+        independent control signal normalization, and the limitations of single-modality guidance. To address these
+        issues, we propose <strong>LongVie</strong>, an end-to-end autoregressive framework for controllable long video
+        generation.
+        LongVie introduces two core designs to ensure temporal consistency: 1) a unified noise initialization strategy
+        that maintains consistent generation across clips, and 2) global control signal normalization that enforces
+        alignment in the control space throughout the entire video. To mitigate visual degradation, LongVie employs 3) a
+        multi-modal control framework that integrates both dense (e.g., depth maps) and sparse (e.g., keypoints) control
+        signals, complemented by 4) a degradation-aware training strategy that adaptively balances modality
+        contributions over time to preserve visual quality. We also introduce <strong>LongVGenBench</strong>, a
+        comprehensive benchmark
+        consisting of 100 high-resolution videos spanning diverse real-world and synthetic environments, each lasting
+        over one minute. Extensive experiments show that LongVie achieves state-of-the-art performance in long-range
+        controllability, consistency, and quality.
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container interactive-container" style="margin-top: 10px;">
+        <div style="width: 100%;">
+          <img src="assets/images/teaser.jpg" alt="full screen" style="width: 100%; height: auto; display: block;">
+        </div>
+      </div>
+      <div class="teaser-item" style="margin-top: 10px;">
+        <p class="body-text" style='font-size:18px; color:#212529 ;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";'>
+          LongVie is a controllable ultra-long video generation framework guided by both dense and sparse control
+          signals,
+          with a degradation-aware training strategy to balance the contribution of the modalities.
+          It applies global normalization to the control signals and employs unified initialization noise to
+          autoregressively generate videos lasting up to one minute.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row" id="abstract">
+        <div class="col my-3">
+          <p class="text-header">
+            Rethinking Controllable Generation of Long Videos
+          </p>
+          <div style="width: 100%; display: flex; justify-content: center;">
+            <img src="assets/images/intro_analyze.jpg" alt="full screen" style="width: 100%; height: auto;">
+          </div>
+          <p class="body-text">
+          <li>When directly applying current controllable video generation models to long videos, we identify two main issues: temporal inconsistency and visual degradation.</li>
+          <li><strong>Temporal inconsistency:</strong> The video often exhibits fine-grained discontinuities and abrupt changes between frames.</li>
+          <li><strong>Visual degradation:</strong> The video may suffer from color drifting and reduced visual fidelity, leading to artifacts such as distorted railings or water ripples.</li>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+      <div class="row" id="abstract">
+        <div class="col my-3">
+          <p class="text-header">
+            Framework
+          </p>
+          <div style="width: 100%;">
+            <img src="assets/images/framework.jpg" alt="full screen" style="width: 100%; height: auto; display: block;">
+          </div>
+          <p class="body-text" style="margin-bottom: 20px;">
+            <li>To address these challenges, we propose <strong>LongVie</strong>, the first autoregressive framework for controllable long video generation.</li>
+            <li>To enhance visual quality, we introduce a multi-modal control mechanism that combines dense and sparse control signals to leverage their complementary strengths. Additionally, we adopt a degradation-aware training strategy to balance their contributions effectively.</li>
+            <li>To improve temporal consistency, we incorporate unified noise initialization and global control signal normalization to ensure world-consistent generative dynamics across time steps.</li>            
+          </p>
+        </div>
+        <div style="width: 100%;">
+          <img src="assets/images/zero_linear_compare.jpg" alt="full screen" style="width: 100%; height: auto; display: block;">
+        </div>
+        <p class="body-text" style='font-size:18px; color:#212529 ;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";'>
+          For details on the design of the control component, we present two variant structures—(b) and (c)—that integrate dense and sparse control signals, in contrast to the standard ControlNet design shown in (a).
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section>
+    <div class="container">
+      <div class="row" id="abstract">
+        <div class="col my-3">
+          <p class="text-header">
+            Experiments
+          </p>
+          <div style="width: 100%;display: flex; justify-content: center;">
+            <img src="assets/images/table1.jpg" alt="full screen" style="width: 80%; height: auto; display: block;">
+          </div>
+          <p class="body-text" style='margin-bottom: 20px;font-size:18px; color:#212529 ;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";'>
+            Quantitative results of LongVie and baselines on our LongVGenBench. DAS-LV and Depth-LV refer to the adapted versions of DAS and depth-controlled CogVideo, respectively, for long video generation. Bold indicates the best performance, and underline denotes the second-best.
+          </p>
+        </div>
+        <div style="width: 100%;display: flex; justify-content: center;">
+          <img src="assets/images/ablation.jpg" alt="full screen" style="width: 80%; height: auto; display: block;">
+        </div>
+        <p class="body-text" style='font-size:18px; color:#212529 ;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";'>
+          Ablation study for our proposed components. The blue block denotes experiments targeting temporal consistency, while the pink block denotes those focusing on visual quality
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section>
+    <div class="container">
+      <div class="row" id="citation">
+        <div class="col my-3">
+          <p class="text-header">
+            BibTeX
+          </p>
+          <div class="citation-block" style="background-color: #f8f9fa; padding: 15px; border-radius: 5px;">
+            <pre id="citation-text" style="font-family: monospace; text-align: left;">
+      @misc{gao2025longvie,
+        title={LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation}, 
+        author={Jianxiong Gao and Zhaoxi Chen and Xian Liu and Jianfeng Feng and Chenyang Si and Yanwei Fu and Yu Qiao and Ziwei Liu},
+        year={2025},
+        eprint={2508.03694},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2508.03694}, 
+      }
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 60px;"></div>
+
+    <script src="assets/js/canvas.js"></script>
+    <script src="assets/js/video.js"></script>
+
+
+</body>
+
+</html>
